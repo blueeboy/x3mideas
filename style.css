@@ -1,0 +1,439 @@
+* {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Host Grotesk", sans-serif;
+}
+
+header {
+  height: 90vh;
+  background-color: rgb(182, 17, 17);
+  padding: 2em 4em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: rgb(254, 115, 16);
+  transition: all 0.5s ease-out;
+}
+
+nav img {
+  width: 150px;
+  object-fit: cover;
+}
+
+.active {
+  color: rgb(254, 115, 16);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -4em;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 4.5em;
+  font-weight: 100;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.slide img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  bottom: 0;
+  border-radius: 5px;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: justify;
+  hyphens: auto;
+  width: 100%;
+  height: 90vh;
+  z-index: 100;
+}
+
+.text-overlay p {
+  width: 40%;
+}
+
+.text-overlay a {
+  background-color: rgb(182, 17, 17);
+  color: white;
+  padding: 7px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.text-overlay a:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 20px 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 2em;
+  z-index: 10;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(40, 39, 39);
+  height: 100%;
+}
+
+.pagination img {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  border: 2px solid transparent;
+}
+
+.pagination img.active {
+  opacity: 0.6;
+  border: 2px solid black;
+}
+
+/* BRANDS */
+.brands {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  padding: 5em 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.brands p {
+  font-weight: bold;
+}
+
+.brand-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  align-content: center;
+}
+
+.brand-logo img {
+  object-fit: cover;
+}
+
+/* CARD */
+
+.card {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 3em 0em;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.awards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  margin: 0 auto;
+  gap: 1em;
+  overflow: hidden;
+  height: 100%;
+  flex: 1;
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em 0em;
+  width: 100%;
+  height: 220px;
+  background-color: rgb(39, 39, 39);
+  color: #fff;
+  border-radius: 20px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 2em 0em;
+  flex: 1;
+  border: 2px solid rgb(39, 39, 39);
+}
+
+.card1 h2 {
+  margin: 1em 0 0 0;
+  font-size: 1.2em;
+  flex: 1;
+}
+
+.card1 ul {
+  text-align: center;
+  padding: 0 1em;
+  width: 90%;
+  list-style: none;
+  margin: 0 auto;
+  margin-top: -20px;
+  flex: 1;
+}
+
+.card1 ul li {
+  color: rgb(254, 115, 16);
+  font-size: 0.8em;
+}
+
+.card1 img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card1:hover {
+  border: 2px solid rgb(111, 110, 110);
+  transition: all 0.5s ease-in-out;
+}
+
+/* CAROUSEL */
+
+.carousel-container {
+  width: 90%; /* Fits 3 cards */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background: black;
+  padding: 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.carousel {
+  width: 133.33%; /* 4 cards * 200px each */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+.carousel .card {
+  width: 33.33%;
+  height: 200px;
+  background: #2a2a2a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: 0 1%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 2em;
+  overflow: hidden;
+}
+.buttons {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.buttons button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+/* Pagination Dots */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: black;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  background-color: rgb(41, 39, 39);
+}
+
+.dot.active {
+  background: #6a6969;
+}
+
+.carousel-container a {
+  background-color: rgb(182, 17, 17);
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  margin: 20px auto;
+  max-width: 13%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-size: 80%;
+}
+
+.carousel-container a:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* FOOTER */
+footer {
+  color: white;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 4em;
+  margin: 0 auto;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.first .line {
+  border: 1px solid white;
+  height: 300px;
+}
+
+.first h1 {
+  font-size: 4em;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6em;
+  margin-top: 22em;
+}
+
+.second .top,
+.second .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3em;
+  flex: 1;
+}
+
+.second .location {
+  flex: 1;
+}
+
+.second .location h1 {
+  background: linear-gradient(to right, rgb(254, 115, 16), rgb(182, 17, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  flex: 1;
+}
+
+.second .location p {
+  font-size: 20px;
+  margin-top: 0.7em;
+  flex: 1;
+}
+
+.second .location a {
+  text-decoration: none;
+  color: #6a6969;
+  font-size: 14px;
+}
