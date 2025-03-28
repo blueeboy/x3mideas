@@ -129,3 +129,18 @@ function restartAutoSlide() {
 }
 
 restartAutoSlide();
+
+
+const burger = document.querySelector(".burger")
+const menu = document.querySelector(".menu")
+const close = document.querySelector(".close")
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("reveal")
+  burger.classList.toggle("toggle")
+})
+
+close.addEventListener("click", ()=> {
+  menu.classList.toggle("reveal")
+  burger.classList.toggle("toggle")
+})
